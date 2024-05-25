@@ -142,7 +142,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
                     {
                         PriceData = new SessionLineItemPriceDataOptions
                         {
-                            UnitAmount = (long)(item.Price * 100), // $20.50 => 2050
+                            UnitAmount = (long)(item.Price * 100), // €20.50 => 2050
                             Currency = "eur",
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
@@ -181,7 +181,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
                     _unitOfWork.OrderHeader.UpdateStatus(id, SD.StatusApproved, SD.PaymentStatusApproved);
                     _unitOfWork.Save();
                 }
-                HttpContext.Session.Clear();
+                //HttpContext.Session.Clear();
 
             }
             List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart
