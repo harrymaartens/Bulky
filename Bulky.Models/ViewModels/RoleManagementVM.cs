@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BulkyBook.Models.ViewModels
 {
-    public class RoleManagmentVM
+    public class RoleManagementVM
     {
         public ApplicationUser ApplicationUser { get; set; }
         public IEnumerable<SelectListItem> RoleList { get; set; }

@@ -30,7 +30,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         {
             string RoleID = _db.UserRoles.FirstOrDefault(u => u.UserId == userId).RoleId;
 
-            RoleManagmentVM RoleVM = new RoleManagmentVM()
+            RoleManagementVM RoleVM = new RoleManagementVM()
             {
                 ApplicationUser = _db.ApplicationUsers.Include(u => u.Company).FirstOrDefault(u => u.Id == userId),
                 RoleList = _db.Roles.Select(i => new SelectListItem
